@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY Valentines Day BABYYYY!</title>
+    <!-- Additional meta tags, stylesheets, or scripts can be included here -->
+    <link rel="stylesheet" href="../Css/Styles.css">
+</head>
+<body>
+    <div class="Container">
+        <div class="unclickable">
+            <iframe src="https://giphy.com/embed/vzvnFJV8a7zipTTuHf" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
+            <div>
+                HAPPY VALENTINES DAY BABYYY! PILI KA!!!!!! 
+            </div>
+        </div>
+        <div class="ButtonCollection">
+            <div class="AnnoyingButton" id="AnnoyingButton">
+                Bigyan kita 2000 Pesos
+            </div>
+            <div class="NormalButton" id="NormalButton">
+                Pag MAMAHL ko ok na baby! Iloveyou so much mwhaa!
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        
+    </div>
+    <script>
+        document.getElementById("AnnoyingButton").addEventListener("click", function() {
+            // Get random position within viewport
+            var xPos = Math.random() * (window.innerWidth - 200); // Subtract button width
+            var yPos = Math.random() * (window.innerHeight - 50); // Subtract button height
+
+            // Set new position
+            this.style.position = "absolute";
+            this.style.left = xPos + "px";
+            this.style.top = yPos + "px";
+        });
+        document.getElementById("NormalButton").addEventListener("click", function() {
+            // Show overlay
+            document.getElementById("overlay").style.display = "block";
+
+            // Create floating text
+            var floatingText = document.createElement("div");
+            floatingText.textContent = "Iloveyou so much baby from your Jackbart";
+            floatingText.className = "floating-text";
+            document.body.appendChild(floatingText);
+
+            // Remove floating text and hide overlay after 3 seconds
+            
+        });
+    </script>
+</body>
+</html>
